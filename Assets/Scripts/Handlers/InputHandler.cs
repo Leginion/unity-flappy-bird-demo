@@ -8,9 +8,6 @@ public class InputHandler : MonoBehaviour
     private MoveController move;
 
     [SerializeField]
-    private GravityController gravity;
-
-    [SerializeField]
     private BirdController bird;
 
     [SerializeField]

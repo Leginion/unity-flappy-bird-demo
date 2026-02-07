@@ -1947,7 +1947,6 @@ GameObject:
   - component: {fileID: 1435514837}
   - component: {fileID: 1435514841}
   - component: {fileID: 1435514835}
-  - component: {fileID: 1435514839}
   - component: {fileID: 1435514838}
   - component: {fileID: 1435514840}
   m_Layer: 0
@@ -2028,19 +2027,6 @@ MonoBehaviour:
   jumpForce: 5
   rb: {fileID: 1435514837}
   facing: {fileID: 1435514840}
---- !u!114 &1435514839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435514833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a3ccb89f5fd7941bfeb0191c52920b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1435514837}
 --- !u!114 &1435514840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2983,7 +2969,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 1435514835}
-  gravity: {fileID: 1435514839}
   bird: {fileID: 1435514838}
   moveAmount: 10
 --- !u!4 &2140216499
