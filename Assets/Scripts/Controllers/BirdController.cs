@@ -33,7 +33,7 @@ public class BirdController : MonoBehaviour
         facing.SetUpwardRotation();
 
         // play sound
-        int i = Random.Range(1, 2);
+        int i = Random.Range(1, 3);
         string sfx_name = $"bird/wing-{i}";
         AudioManager.PlaySFX(sfx_name);
     }
@@ -45,7 +45,7 @@ public class BirdController : MonoBehaviour
             GameManager.Failed();
 
             // play sound
-            int i = Random.Range(1, 2);
+            int i = Random.Range(1, 3);
             string sfx_name = $"bird/die-{i}";
             AudioManager.PlaySFXFrom(sfx_name, 300f);
         }

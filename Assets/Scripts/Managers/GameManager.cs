@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         CurrentScore += v;
         Instance.OnScoreChanged();
 
-        int i2 = UnityEngine.Random.Range(1, 2);
+        int i2 = UnityEngine.Random.Range(1, 3);
         string sound = $"bird/point-{i2}";
         AudioManager.PlaySFX(sound);
 

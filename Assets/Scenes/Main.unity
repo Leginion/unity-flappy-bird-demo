@@ -1722,15 +1722,33 @@ MonoBehaviour:
   - level: 1
     prefabs:
     - {fileID: 9137721631904729840, guid: 48b4c8f66fbf85742bb447c641747e07, type: 3}
+    - {fileID: 9137721631904729840, guid: a74843beabf19d74ab1f57a8e07e1f50, type: 3}
+    - {fileID: 9137721631904729840, guid: a58c4d7b04d9c1c4bbf4c1f4330f3c3f, type: 3}
   - level: 2
     prefabs:
     - {fileID: 9137721631904729840, guid: 48b4c8f66fbf85742bb447c641747e07, type: 3}
+    - {fileID: 9137721631904729840, guid: cedc31d316616034e86a99f0d4c74f7f, type: 3}
+    - {fileID: 9137721631904729840, guid: 3ecf106a4a66a0146b6d71e1697c3972, type: 3}
+    - {fileID: 9137721631904729840, guid: a74843beabf19d74ab1f57a8e07e1f50, type: 3}
+    - {fileID: 9137721631904729840, guid: a58c4d7b04d9c1c4bbf4c1f4330f3c3f, type: 3}
   - level: 3
     prefabs:
     - {fileID: 9137721631904729840, guid: 48b4c8f66fbf85742bb447c641747e07, type: 3}
+    - {fileID: 9137721631904729840, guid: cedc31d316616034e86a99f0d4c74f7f, type: 3}
+    - {fileID: 9137721631904729840, guid: 3ecf106a4a66a0146b6d71e1697c3972, type: 3}
+    - {fileID: 9137721631904729840, guid: a74843beabf19d74ab1f57a8e07e1f50, type: 3}
+    - {fileID: 9137721631904729840, guid: a58c4d7b04d9c1c4bbf4c1f4330f3c3f, type: 3}
+    - {fileID: 9137721631904729840, guid: 611d32206eee8b1488d7431d6484ec4c, type: 3}
+    - {fileID: 9137721631904729840, guid: 24be3f200a2001d468d6221a2089e586, type: 3}
   - level: 4
     prefabs:
     - {fileID: 9137721631904729840, guid: 48b4c8f66fbf85742bb447c641747e07, type: 3}
+    - {fileID: 9137721631904729840, guid: cedc31d316616034e86a99f0d4c74f7f, type: 3}
+    - {fileID: 9137721631904729840, guid: 3ecf106a4a66a0146b6d71e1697c3972, type: 3}
+    - {fileID: 9137721631904729840, guid: a74843beabf19d74ab1f57a8e07e1f50, type: 3}
+    - {fileID: 9137721631904729840, guid: a58c4d7b04d9c1c4bbf4c1f4330f3c3f, type: 3}
+    - {fileID: 9137721631904729840, guid: 611d32206eee8b1488d7431d6484ec4c, type: 3}
+    - {fileID: 9137721631904729840, guid: 24be3f200a2001d468d6221a2089e586, type: 3}
   bird: {fileID: 1435514838}
 --- !u!1 &1222241131
 GameObject:

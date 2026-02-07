@@ -38,7 +38,7 @@ public class PipeSystem : MonoBehaviour
     GameObject PickPipePettern(int level)
     {
         var list = pipePatternPrefabsMap[level];
-        int i = Random.Range(1, list.Count) - 1;
+        int i = Random.Range(0, list.Count);
         return list[i];
     }
 
