@@ -1,0 +1,28 @@
+管道生成系统决策总结
+2026-2-7 07:34:48 | Claude 4.5
+
+1. 难度递增机制
+    基于分数触发难度变化                                => scoreRequireParts
+    使用分段式难度递增(非连续渐变)
+    阈值示例: 10/30/50/100/200/500(可配置)
+
+2. 管道模式设计
+    采用序列规划而非独立生成
+    使用 Prefab 存储预设的 Pattern
+    每个 Pattern 包含多根管道的组合(平行/上升/下降/波浪等)
+    Pattern 之间允许存在间隙
+
+3. 数据结构
+    DifficultyLevel 结构:包含 scoreThreshold + patterns 数组
+    配置方式:可在 Inspector 配置
+    Level 切换规则:只使用当前 level 的 Pattern(不混合)
+
+4. 生成逻辑
+    触发方式:基于位置检测(最后一根管道 x <= threshold)
+    threshold 可配置用于调整连续性
+    Pattern 整体实例化,不会被打断
+
+5. 性能优化
+    缓存 currentLevel,避免重复计算
+    Level 更新逻辑放在 GameManager
+    分数变化时检查并更新缓存
