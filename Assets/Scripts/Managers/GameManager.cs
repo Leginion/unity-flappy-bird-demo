@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [System.Serializable]
+    [Serializable]
     public class GameObjectPart
     {
         public string name;
@@ -140,6 +140,9 @@ public class GameManager : MonoBehaviour
         {
             part = Instance.gameObjectPartDictionary["part/intro"];
             part.obj.SetActive(false);
+
+            part = Instance.gameObjectPartDictionary["part/title"];
+            part.obj.SetActive(false);
         }
 
         if (gs_new == GameStateType.Intro)
@@ -147,6 +150,9 @@ public class GameManager : MonoBehaviour
             ResetStates();
 
             part = Instance.gameObjectPartDictionary["part/intro"];
+            part.obj.SetActive(true);
+
+            part = Instance.gameObjectPartDictionary["part/title"];
             part.obj.SetActive(true);
 
             part = Instance.gameObjectPartDictionary["part/game"];
@@ -171,14 +177,10 @@ public class GameManager : MonoBehaviour
             part = Instance.gameObjectPartDictionary["core/score"];
             part.obj.GetComponent<ScoreController>().SetValue(0);
             part.obj.SetActive(true);
-
-            Time.timeScale = 1f;
         }
 
         if (gs_new == GameStateType.Result)
         {
-            Time.timeScale = 0f;
-
             FindObjectOfType<GUIManager>().ShowGameOverPanel(true);
         }
     }
@@ -217,5 +219,32 @@ public class GameManager : MonoBehaviour
     public static void Failed()
     {
         ChangeGameState(GameStateType.Result);
+    }
+
+    private static float tresholdCore;
+    private static float tresholdPass = -0.04f;
+    private static float tresholdClean = -2.00f;
+    private static float tresholdSpawnLine = -0.04f;
+
+    public static void SetTresholdCore(float v)
+    {
+        tresholdCore = v;
+    }
+    public static float GetTreshold(string name)
+    {
+        if (name == "pass")
+        {
+            return tresholdCore + tresholdPass;
+        }
+        if (name == "clean")
+        {
+            return tresholdCore + tresholdClean;
+        }
+        if (name == "spawn-line")
+        {
+            return tresholdCore + tresholdSpawnLine;
+        }
+
+        return tresholdCore;
     }
 }

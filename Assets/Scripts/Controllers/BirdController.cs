@@ -17,6 +17,7 @@ public class BirdController : MonoBehaviour
     private void Awake()
     {
         v3_initial = transform.localPosition;
+        GameManager.SetTresholdCore(v3_initial.x);
     }
 
     public void ResetBirdPosition()
@@ -40,6 +41,8 @@ public class BirdController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (GameManager.GetCurrentGameState() == GameStateType.Result) return;
+
         if (other.gameObject.CompareTag("Collide"))
         {
             GameManager.Failed();

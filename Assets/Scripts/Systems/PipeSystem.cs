@@ -108,7 +108,7 @@ public class PipeSystem : MonoBehaviour
         }
 
         rootTransform.SetParent(cacheTransform, false);
-        rootTransform.localPosition = new Vector3(2f, Random.Range(-0.6f, 0.6f), 0f);
+        rootTransform.localPosition = new Vector3(2f, Random.Range(-0.4f, 0.4f), 0f);
     }
 
     void RequestSpawn()

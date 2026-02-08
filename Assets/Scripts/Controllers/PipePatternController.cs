@@ -29,6 +29,7 @@ class PipePatternController : MonoBehaviour
     private void FixedUpdate()
     {
         if (canClean) return;
+        if (GameManager.GetCurrentGameState() == GameStateType.Result) return;
 
         cacheTransform.position += Vector3.left * speedPerFixedFrame;
 
