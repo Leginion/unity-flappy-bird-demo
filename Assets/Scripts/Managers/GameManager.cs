@@ -109,6 +109,16 @@ public class GameManager : MonoBehaviour
         return CurrentScore;
     }
 
+    public static int GetBestScore()
+    {
+        return PlayerPrefs.GetInt("BestScore", 0);
+    }
+
+    public static void SetBestScore(int value)
+    {
+        PlayerPrefs.SetInt("BestScore", value);
+    }
+
     public static int GetCurrentLevel()
     {
         return CurrentLevel;

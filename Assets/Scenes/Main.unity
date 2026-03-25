@@ -1665,6 +1665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 99340743}
   medalController: {fileID: 1506990615}
+  scoreMain: {fileID: 1805058519}
   scoreNow: {fileID: 1555265323}
   scoreBest: {fileID: 50958866}
 --- !u!1 &703864843
