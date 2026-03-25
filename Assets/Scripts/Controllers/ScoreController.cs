@@ -145,7 +145,7 @@ public class ScoreController : MonoBehaviour
 
             if (!shouldShow)
             {
-                img.transform.gameObject.SetActive(false);
+                img.transform.gameObject.SetActive(!centerAlign);                    
                 img.enabled = false;
                 img.sprite = null;
             }
