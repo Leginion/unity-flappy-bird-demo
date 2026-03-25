@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GUIManager : MonoBehaviour
 {
@@ -7,6 +8,13 @@ public class GUIManager : MonoBehaviour
     [SerializeField] private ScoreController scoreMain;
     [SerializeField] private ScoreController scoreNow;
     [SerializeField] private ScoreController scoreBest;
+    [SerializeField] private Button playAgain;
+    [SerializeField] private GameObject newBest;
+
+    void Awake()
+    {
+        playAgain.onClick.AddListener(OnClickPlayAgain);
+    }
 
     public void ShowGameOverPanel(bool is_show)
     {
@@ -26,8 +34,29 @@ public class GUIManager : MonoBehaviour
 
             if (score > best)
             {
+                newBest.SetActive(true);
                 GameManager.SetBestScore(score);
             }
+            else
+            {
+                newBest.SetActive(false);
+            }
         }
+    }
+
+    private void Update()
+    {
+        if (GameOverPanel.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GameManager.ChangeGameState(GameStateType.Intro);
+            }
+        }
+    }
+
+    private void OnClickPlayAgain()
+    {
+        GameManager.ChangeGameState(GameStateType.Intro);
     }
 }

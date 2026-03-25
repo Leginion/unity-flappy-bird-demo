@@ -27,10 +27,7 @@ public class InputHandler : MonoBehaviour
         }
         else if (gs == GameStateType.Result)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-            {
-                GameManager.ChangeGameState(GameStateType.Intro);
-            }
+            // skip
         }
         else
         {
